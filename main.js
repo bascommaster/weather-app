@@ -86,7 +86,7 @@ window.addEventListener("orientationchange", () => {
 });
 
 function getCity(town) {
-    const API = `http://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${KEY}&units=metric&lang=pl`;
+    const API = `https://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${KEY}&units=metric&lang=pl`;
 
     fetch(API)
         .then((responce) => responce.json())
