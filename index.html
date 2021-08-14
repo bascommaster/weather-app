@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather app</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="app main-container__app clear-fix">
+                <section class="top-row app__top-row">
+                    <a class="top-row__button">Odwiedzone</a>
+                    <h1 class="top-row__clock">12:34</h1>
+                    <h2 class="top-row__city"></h2>
+                    <form id="city" action="" class="form top-row__form">
+                        <label for="cityName" class="form__label">Miasto</label>
+                        <input
+                            type="text"
+                            class="form__find-city"
+                            name="cityName"
+                            required="required"
+                            pattern="[a-zA-Z]"
+                            placeholder="podaj nazwę miasta"
+                        />
+                        <input type="submit" class="form__serch" value="Znajdź miasto" />
+                    </form>
+                </section>
+
+                <section class="botton-row app__bottom-row">
+                    <div class="botton-row__tile tile">
+                        <h2 class="header tile__header">TEMPERATURA</h2>
+                        <img src="./img/ico11.png" alt="" class="tile__ico" />
+                        <p id="temperature" class="tile__description">&#176;C</p>
+                    </div>
+                    <div class="botton-row__tile tile">
+                        <h2 class="header tile__header">WILGOTNOŚĆ</h2>
+                        <img src="./img/ico4.png" alt="" class="tile__ico" />
+                        <p id="humidity" class="tile__description">%</p>
+                    </div>
+                    <div class="botton-row__tile tile">
+                        <h2 class="header tile__header">CIŚNIENIE</h2>
+                        <img src="./img/ico10.png" alt="" class="tile__ico" />
+                        <p id="pressure" class="tile__description">hPa</p>
+                    </div>
+                    <div class="botton-row__tile tile">
+                        <h2 class="header tile__header">ZACHMURZENIE</h2>
+                        <img src="./img/ico12.png" alt="" class="tile__ico" />
+                        <p id="clouds" class="tile__description">%</p>
+                    </div>
+                    <div class="botton-row__tile tile">
+                        <h2 class="header tile__header">WARUNKI</h2>
+                        <img src="./img/ico2.png" alt="" class="tile__ico" />
+                        <p id="conditions" class="tile__description tile__description-conditions">
+                            przelotne opady deszczu
+                        </p>
+                    </div>
+                    <div class="botton-row__tile tile">
+                        <h2 class="header tile__header">WIATR</h2>
+                        <img src="./img/ico9.png" alt="" class="tile__ico" />
+                        <p id="wind" class="tile__description">m/s</p>
+                    </div>
+                </section>
+                <section class="visited app__visited">
+                    <h2 class="visited__header">ostatnio szukane</h2>
+                    <div class="visited__city city"></div>
+                </section>
+            </div>
+        </div>
+
+        <script src="./main.js" type="module"></script>
+    </body>
+</html>
